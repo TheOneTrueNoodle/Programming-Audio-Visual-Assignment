@@ -1,3 +1,5 @@
+
+
 Colour c;
 demo[] b;
 void setup () {
@@ -18,10 +20,11 @@ void setup () {
 
 void draw () {
   background(255);
-  c.colours();
+ 
   for (int i=0; i< b.length;i++){
   
-  //b[i].shapes();
-  
+ // b[i].shapes();
+   
   }
+  c.colours();
 }

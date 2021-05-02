@@ -2,11 +2,11 @@ class demo {
   float x, y, c,w,l;
 
   demo() {
-   x = random(0, width);
-   y = random(0, height);
+
   // c = random(0, 255);
-   w = random(50,200);
-   l = random(50,200);
+   y = random(width);
+   w = 100;
+   l = 100;
   }
 
 
@@ -16,6 +16,8 @@ class demo {
     } else {
      // fill(c, 255, 255);
     }
+    for(float x=0;x<width;x=x+20)
     rect(x, y, w, l);
+    println(y);
   }
 }

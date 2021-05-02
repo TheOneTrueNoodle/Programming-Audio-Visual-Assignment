@@ -3,7 +3,7 @@ class Colour {
   float c = 0;
   float h, s, b;
   int art =0;
-  int woah=0;
+  float woah=0;
 
   void colours() {
     int i = 0;
@@ -53,10 +53,16 @@ class Colour {
       {woah = 0;}
       fill(c+i, 255, 255);
       rect(0, n+woah-100, width, n);
-      println(woah);}
-      
-    
-      
+      println(woah);} 
+    }
+     if(art >=40 && art <50){
+      for (int n =0; n<width; i++, n=n+10) { 
+      fill(c+i, 255, 255);
+      woah=woah +0.1;
+      if(woah > width)
+      {woah = 0;}
+      ellipse(n, woah, 100, 100);
+      ellipse(woah, n, 100, 100);}
     }
     
      println(art);
