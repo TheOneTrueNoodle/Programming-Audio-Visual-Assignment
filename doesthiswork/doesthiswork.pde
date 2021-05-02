@@ -1,4 +1,4 @@
-
+Colour c;
 demo[] b;
 void setup () {
   colorMode(HSB);
@@ -6,18 +6,22 @@ void setup () {
 
   
   b = new demo[100];
+  c = new Colour();
   
+
   for(int i=0; i<b.length; i++){
     b[i] = new demo();
   }
 }
 
 
+
 void draw () {
   background(255);
-
+  c.colours();
   for (int i=0; i< b.length;i++){
-  b[i].colour();
+  
+  //b[i].shapes();
   
   }
 }
