@@ -1,4 +1,3 @@
-//POGGERS
 import ddf.minim.*;
 import ddf.minim.analysis.*;
 import ddf.minim.effects.*;
@@ -13,17 +12,27 @@ AudioBuffer buffer;
 menu A;
 song B;
 
+float tableWidth = 500, tableHeight = 250;
+float tableXPos, tableYPos;
+
 void setup()
 {
-  size(500, 500);
+  size(1000, 800);
+  
   minim = new Minim(this);
   A = new menu();
   B = new song();
+  
+  tableXPos = (width / 2) - (tableWidth / 2);
+  tableYPos = (height / 2) - (tableHeight / 2);
 }
 
 void draw()
 {
   background(0);
+  
+  djTable();
+  
   B.choice = A.songChoice;
   B.Choice();
   if (A.songChoice == 0)
@@ -60,4 +69,13 @@ void stopSong()
   A.songChoice = 0;
   B.choice = 0;
   B.stop = false;
+}
+
+void djTable()
+{
+  fill(128, 0, 0);
+  rect(tableXPos, tableYPos, tableWidth, tableHeight);
+  
+  fill(50);
+  rect(tableXPos + 10, tableYPos + 10, tableWidth - 20, tableHeight - 110);
 }

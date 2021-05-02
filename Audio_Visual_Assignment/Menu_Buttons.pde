@@ -5,14 +5,14 @@ class menu
   int[] x = new int[3];
   int[] y = new int[3];
   String[] name = {"Pink Sand", "Tinnitus Dance", "Sus"};
-  int rad = 50;
+  int rad = 40;
 
   void display()
   {
     for (int i = 0; i < 3; i++)
     {
-      x[i] = 100 + 150 * i;
-      y[i] = 100;
+      x[i] = 300 + 100 * i;
+      y[i] = 475;
     }
 
     for (int i = 0; i < 3; i++)
@@ -21,12 +21,15 @@ class menu
       {
         stroke(255);
         strokeWeight(5);
-      } else
+      } 
+      else
       {
         noStroke();
       }
+      
       fill(100);
       ellipse(x[i], y[i], rad*2, rad*2);
+      
       fill(255);
       textSize(15);
       textAlign(CENTER);
@@ -48,22 +51,25 @@ class menu
 
   void stopButton()
   {
-    if (dist(mouseX, mouseY, 425, 425) < rad)
+    if (dist(mouseX, mouseY, 700, 475) < rad)
     {
       stroke(255);
       strokeWeight(5);
-    } else
+    } 
+    else
     {
       noStroke();
     }
+    
     fill(100);
-    ellipse(425, 425, rad*2, rad*2);
+    ellipse(700, 475, rad*2, rad*2);
+    
     fill(255);
     textSize(15);
     textAlign(CENTER);
-    text("Stop", 425, 425);
+    text("Stop", 700, 475);
 
-    if ((dist(mouseX, mouseY, 425, 425) < rad) & mousePressed && (mouseButton == LEFT))
+    if ((dist(mouseX, mouseY, 700, 475) < rad) & mousePressed && (mouseButton == LEFT))
     {
       B.stop = true;
     }
